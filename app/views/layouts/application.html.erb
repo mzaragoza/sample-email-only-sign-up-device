@@ -9,6 +9,11 @@
   </head>
 
   <body>
+    <% if current_user %>
+      LOG OUT
+    <% else %>
+      <%= link_to 'sign_up', new_user_registration_path %>
+    <% end %>
     <%= yield %>
   </body>
 </html>
